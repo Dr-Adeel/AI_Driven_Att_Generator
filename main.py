@@ -28,7 +28,7 @@
 from modules.description_generator import generate_description
 from modules.price_recommendation import recommend_price
 
-print("🤖 Shopora Chatbot (type 'quit' to exit)")
+print("Shopora Chatbot (type 'quit' to exit)")
 print("Commands: desc: <product title>, price: <product title>")
 
 while True:
@@ -38,14 +38,14 @@ while True:
 
     if user_input.startswith("desc:"):
         title = user_input.replace("desc:", "").strip()
-        print("👉 Generating description...")
+        print("Generating description...")
         print(generate_description(title))
 
     elif user_input.startswith("price:"):
         title = user_input.replace("price:", "").strip()
-        print("👉 Recommending price...")
+        print("Recommending price...")
         print(recommend_price(title))
 
     else:
-        print("👉 Use `desc:` for description or `price:` for price recommendation.")
+        print("Use `desc:` for description or `price:` for price recommendation.")
 
